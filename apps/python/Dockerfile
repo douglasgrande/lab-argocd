@@ -1,5 +1,5 @@
 # Imagem base leve
-FROM python:3.9-slim
+FROM python:3.14.3-slim-trixie
 
 # Define o diretório de trabalho
 WORKDIR /app

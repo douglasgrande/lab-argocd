@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-from prometheus_flask_exporter import PrometheusMetrics
+from flask import Flask, jsonify # type: ignore
+from prometheus_flask_exporter import PrometheusMetrics # type: ignore
 
 app = Flask(__name__)
 
