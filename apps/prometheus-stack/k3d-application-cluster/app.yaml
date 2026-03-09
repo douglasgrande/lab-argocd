@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: in-cluster-prometheus-stack
+  name: k3d-application-cluster-prometheus-stack
   namespace: argocd
 spec:
   project: default
@@ -29,11 +29,11 @@ spec:
           - $values/core-values/prometheus/exporters/default-exporters.yaml
           - $values/core-values/prometheus/jobs/default-jobs.yaml
           - $values/core-values/prometheus/rules/default-rules.yaml
-          # Reference: Customizable values (substituído {{.name}} por in-cluster)
-          - $values/custom-values/prometheus/in-cluster/prometheus.yaml
-          - $values/custom-values/prometheus/in-cluster/exporters/exporters.yaml
-          - $values/custom-values/prometheus/in-cluster/jobs/jobs.yaml
-          - $values/custom-values/prometheus/in-cluster/rules/rules.yaml
+          # Reference: Customizable values
+          - $values/custom-values/prometheus/k3d-application-cluster/prometheus.yaml
+          - $values/custom-values/prometheus/k3d-application-cluster/exporters/exporters.yaml
+          - $values/custom-values/prometheus/k3d-application-cluster/jobs/jobs.yaml
+          - $values/custom-values/prometheus/k3d-application-cluster/rules/rules.yaml
     # Repositório de valores (ref: values)
     - repoURL: https://github.com/douglasgrande/lab-monitoring.git
       targetRevision: main
