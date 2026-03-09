@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   destination:
-    server: https://kubernetes.default.svc
+    server: https://host.docker.internal:6444
     namespace: monitoring
   syncPolicy:
     automated:
@@ -35,6 +35,6 @@ spec:
           - $values/custom-values/prometheus/k3d-application-cluster/jobs/jobs.yaml
           - $values/custom-values/prometheus/k3d-application-cluster/rules/rules.yaml
     # Repositório de valores (ref: values)
-    - repoURL: https://github.com/douglasgrande/lab-monitoring.git
+    - repoURL: https://github.com/douglasgrande/lab-argocd.git
       targetRevision: main
       ref: values

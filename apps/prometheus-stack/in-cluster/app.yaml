@@ -35,6 +35,6 @@ spec:
           - $values/custom-values/prometheus/in-cluster/jobs/jobs.yaml
           - $values/custom-values/prometheus/in-cluster/rules/rules.yaml
     # Repositório de valores (ref: values)
-    - repoURL: https://github.com/douglasgrande/lab-monitoring.git
+    - repoURL: https://github.com/douglasgrande/lab-argocd.git
       targetRevision: main
       ref: values
